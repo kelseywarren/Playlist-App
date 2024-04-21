@@ -1,5 +1,6 @@
 import React from 'react';
 import './results-style.css';
+import Tracklist from '../Tracklist/tracklist';
 
 function ResultList() {
 
@@ -7,17 +8,7 @@ function ResultList() {
         <div className="result-container">
             <div className="list">
                 <h2>Results</h2>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-                <div className="listItem">placeholder text</div>
-         
+                <Tracklist />
             </div>
         </div>
     )
