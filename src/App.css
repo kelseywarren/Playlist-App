@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.result-playlist {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
