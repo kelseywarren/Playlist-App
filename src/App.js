@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+
 import SearchBar from './Search/searchBar';
-import ResultList from './searchResults/results';
+import ResultList from './SearchResults/results';
+
 
 function App() {
   return (
