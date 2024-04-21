@@ -3,6 +3,7 @@ import './App.css';
 
 import SearchBar from './Search/searchBar';
 import ResultList from './SearchResults/results';
+import Playlist from './Playlist/playlist.js'
 
 
 function App() {
@@ -10,7 +11,10 @@ function App() {
     <div className="App">
        <h1 className="title">The Lounge</h1>
        <SearchBar />
-       <ResultList />
+       <div className="result-playlist">
+        <ResultList />
+        <Playlist />
+       </div>
     </div>
   );
 }

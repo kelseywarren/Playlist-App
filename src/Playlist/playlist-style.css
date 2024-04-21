@@ -1,0 +1,15 @@
+.playListContainer {
+    padding-top: 20px;
+}
+
+.playList {
+    padding-top: 20px;
+    width: 300px;
+    height: 700px;
+    border: 1px solid purple;
+}
+
+.play {
+    padding: 15px;
+    border-bottom: 1px solid purple;
+}
