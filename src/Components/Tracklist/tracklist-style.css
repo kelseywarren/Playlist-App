@@ -1,0 +1,12 @@
+.tracklistContainer {
+  border: 1px solid yellow;
+  height: auto;
+  width: auto;
+}
+
+
+.trackItem {
+    border-bottom: solid 1px black;
+    padding: 15px;
+  }
+
