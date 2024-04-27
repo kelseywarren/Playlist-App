@@ -13,7 +13,7 @@ function App() {
        <h1 className="title">The Lounge</h1>
        <SearchBar />
        <div className="result-playlist">
-        <SearchResults />
+        <SearchResults title="Results" />
         <Playlist />
        </div>
     </div>

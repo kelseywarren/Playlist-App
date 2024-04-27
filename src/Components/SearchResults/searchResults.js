@@ -6,8 +6,11 @@ function SearchResults(props) {
 
     return (
         <div className="resultsContainer"> 
-                <h2>Results</h2>
-                <Tracklist /> 
+                <h2>{props.title}</h2>
+                <Tracklist 
+                isSelected={false}
+                onAdd={props.onAdd}
+                /> 
         </div>
     )
 };
