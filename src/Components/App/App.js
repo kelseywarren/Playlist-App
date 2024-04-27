@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
+import { Spotify } from '../../utility/spotify';
 
 
 function App() {
