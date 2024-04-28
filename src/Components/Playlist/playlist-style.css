@@ -8,7 +8,8 @@
 
 .playlistHeading {
     border: none;
+    outline: none;
     border-bottom: solid 1px purple;
     cursor: pointer;
+    font-size: 22px;
 }
-
