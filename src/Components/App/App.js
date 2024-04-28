@@ -32,14 +32,43 @@ const [searchResults, setSearchResults] = useState([
   }
 
 ]);
-const [playlistTracks, setPlaylistTracks] = useState([]);
+const [playlistTracks, setPlaylistTracks] = useState([
+  {
+    name: "track 11",
+    artist: "artist 11",        //mock data
+    album: "album 11", 
+    id: 11,
 
-const addTrack = (track) => {
-  setPlaylistTracks((prev) => [...prev, track])
-}
+  },
+  {
+    name: "track 12",
+    artist: "artist 12",       //mock data 
+    album: "album 12", 
+    id: 12,
 
-const removeTrack = (track) => {
-setPlaylistTracks((prev) => prev.filter((currTrack) => currTrack.id !== track.id))
+  },
+  {
+    name: "track 13",
+    artist: "artist 13",      // mock data 
+    album: "album 13",
+    id: 13,
+
+  }
+]);
+
+function addTrack(track) {
+  const existingTrack = playlistTracks.find((t) => t.id === track.id);
+  const newTrack = playlistTracks.concat(track);
+  if(existingTrack) {
+    console.log("track already exist")
+  } else {
+    setPlaylistTracks(newTrack);
+  }
+};
+
+function removeTrack(track) {
+  const existingTrack = playlistTracks.filter((t) => t.id !== track.id);
+  setPlaylistTracks(existingTrack);
 };
 
   return (
@@ -50,10 +79,10 @@ setPlaylistTracks((prev) => prev.filter((currTrack) => currTrack.id !== track.id
         <SearchResults 
         title="Results" 
         searchResults={searchResults}
-        addTrack={addTrack}
+        onAdd={addTrack}
         />
         <Playlist
-        playlistTrack={playlistTracks}
+        playlistTracks={playlistTracks}
         removeTrack={removeTrack} />
        </div>
     </div>

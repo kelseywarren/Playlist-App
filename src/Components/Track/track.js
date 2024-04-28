@@ -4,14 +4,6 @@ import './track-style.css';
 
 function Track(props) {
 
-    function passTrack() {
-        props.onAdd(props.track);
-      }
-    
-      function passTrackRemove() {
-        props.onRemove(props.track);
-      }
-
     function buttonAction() {
       if (props.isSelected) {
         return (
@@ -21,13 +13,21 @@ function Track(props) {
         );
       } else {
         return (
-          <button className="button" onclick={passTrack}>
+          <button className="button" onClick={passTrack}>
             +
           </button>
         );
       }
     }
-    
+
+    function passTrack() {
+      props.onAdd(props.track);
+    }
+  
+    function passTrackRemove() {
+      props.onRemove(props.track);
+    }
+
     return (
       <div>
         <div className="song">{props.track.name}</div>
