@@ -55,6 +55,7 @@ const [playlistTracks, setPlaylistTracks] = useState([
 
   }
 ]);
+const [playlistName, setPlaylistName] = useState("Playlist 1")
 
 function addTrack(track) {
   const existingTrack = playlistTracks.find((t) => t.id === track.id);
@@ -71,6 +72,10 @@ function removeTrack(track) {
   setPlaylistTracks(existingTrack);
 };
 
+function updatePlaylistName(name) {
+  setPlaylistName(name);
+}
+
   return (
     <div className="App">
        <h1 className="title">The Lounge</h1>
@@ -82,8 +87,11 @@ function removeTrack(track) {
         onAdd={addTrack}
         />
         <Playlist
+        playlistName={playlistName}
         playlistTracks={playlistTracks}
-        onRemove={removeTrack} />
+        onRemove={removeTrack}
+        onNameChange={updatePlaylistName}
+        />
        </div>
     </div>
   );

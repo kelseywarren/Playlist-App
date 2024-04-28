@@ -6,5 +6,9 @@
     overflow: scroll;
 }
 
-
+.playlistHeading {
+    border: none;
+    border-bottom: solid 1px purple;
+    cursor: pointer;
+}
 
