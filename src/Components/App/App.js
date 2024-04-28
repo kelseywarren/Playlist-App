@@ -83,7 +83,7 @@ function removeTrack(track) {
         />
         <Playlist
         playlistTracks={playlistTracks}
-        removeTrack={removeTrack} />
+        onRemove={removeTrack} />
        </div>
     </div>
   );

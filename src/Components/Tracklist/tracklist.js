@@ -13,8 +13,8 @@ function Tracklist (props) {
                 key={track.id}
                 track={track}
                 onAdd={props.onAdd}
-                isSelected={props.isSelected}
                 onRemove={props.onRemove}
+                isSelected={props.isSelected}
               />
             )
           })}
