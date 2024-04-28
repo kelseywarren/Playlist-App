@@ -8,7 +8,9 @@ function SearchResults(props) {
         <div className="resultsContainer"> 
                 <h2>{props.title}</h2>
                 <Tracklist 
+                tracks={props.searchResults}
                 isSelected={false}
+                addTrack={props.addTrack}
                 onAdd={props.onAdd}
                 /> 
         </div>

@@ -9,9 +9,9 @@ function Playlist(props) {
             <div className="playlist">
                 <h2>Playlist</h2>
                 <Tracklist 
-                onRemove={props.onRemove}
+                tracks={props.playlistTracks}
                 isSelected={true}
-                />
+                removeTrack={props.removeTrack}/>
             </div>
             <button className="saveButton">Save to Spotify</button>
         </div>

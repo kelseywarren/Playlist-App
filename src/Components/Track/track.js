@@ -4,42 +4,34 @@ import './track-style.css';
 
 function Track(props) {
 
-    function addTrack() {
+    function passTrack() {
         props.onAdd(props.track);
       }
     
-      function removeTrack() {
+      function passTrackRemove() {
         props.onRemove(props.track);
       }
 
     function buttonAction() {
       if (props.isSelected) {
         return (
-          <button className="button" onClick={removeTrack}>
+          <button className="button" onClick={passTrackRemove}>
             -
           </button>
         );
       } else {
         return (
-          <button className="button" onclick={addTrack}>
+          <button className="button" onclick={passTrack}>
             +
           </button>
         );
       }
     }
-  
-    function addTrack() {
-      props.onAdd(props.track);
-    }
-  
-    function removeTrack() {
-      props.onRemove(props.track);
-    }
-  
+    
     return (
       <div>
-        <div className="song">{props.track}</div>
-        <span className="artistAlbum"> artist | album</span>
+        <div className="song">{props.track.name}</div>
+        <span className="artistAlbum"> {props.track.artist} | {props.track.album}</span>
         {buttonAction()}
       </div>
     );
