@@ -1,12 +1,14 @@
 let accessToken;
-let input;
+let input = "saturn";
 const clientId = 'b76671d1d5d84f47b7dd4a1a74ba9447';
 const clientSecret = 'f07b5cf6a8c14225918b635353363a79';
 
 
 
+   const Spotify = {
+
    
-      function getToken() {
+      getToken() {
         if (accessToken) {
           return accessToken;
         }
@@ -24,14 +26,13 @@ const clientSecret = 'f07b5cf6a8c14225918b635353363a79';
             console.log(data) 
             accessToken = `${data.access_token}`; 
             console.log(accessToken)
-            search(input, accessToken)
+            Spotify.search(input, accessToken)
         } 
         )));
       
-    };
-    getToken();
+    },
 
-  function search() {
+    search() {
       fetch(`https://api.spotify.com/v1/search?q=${input}&type=track`, {
         headers: {
           Authorization: `Bearer ${accessToken}`
@@ -43,11 +44,11 @@ const clientSecret = 'f07b5cf6a8c14225918b635353363a79';
         
       } 
       )));
-    };
+    },
   
+   }
     
-    
-
+   Spotify.getToken();
 
 
 
