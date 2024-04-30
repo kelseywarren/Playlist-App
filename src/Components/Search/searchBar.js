@@ -4,13 +4,13 @@ import './searchBar-style.css';
 
 function SearchBar(props) {
 
-    const [input, setInput] = useState('') 
+    const [input, setInput] = useState("") 
 
-    const handleChange = (e) => { //sets the typed input as the new input state
+    const handleChange = (e) => { 
         setInput(e.target.value)
     }
 
-    const handleClick = () => { //sends search term to prop in App ?? 
+    const handleClick = () => { 
         props.onSearch(input)
     } 
 

@@ -1,7 +1,7 @@
 let accessToken;
 const clientId = 'b76671d1d5d84f47b7dd4a1a74ba9447';
 const clientSecret = 'f07b5cf6a8c14225918b635353363a79';
-let redirectURI = "http://localhost:8888/callback";
+const redirectURI = "http://localhost:8888/callback";
 
 
 
@@ -35,24 +35,31 @@ let redirectURI = "http://localhost:8888/callback";
     },
    
     search(input) {
-      fetch(`https://api.spotify.com/v1/search?q=${input}&type=track`, {
+      const accessToken = Spotify.getToken();
+      return fetch(`https://api.spotify.com/v1/search?q=${input}&type=track`, {
         headers: {
           Authorization: `Bearer ${accessToken}`
         }
       })
-      .then((response) => console.log(response.json()
+      .then((response) =>  response.json())
       .then((data) => { 
-          console.log(data.tracks)  
-        
-      }
-      
-      )));
+          if (!data) {
+            console.error("response error");
+          } 
+          return data.tracks.items.map((t) => ({
+            id: t.id,
+            name: t.name,
+            artist: t.artists[0].name,
+            album: t.album.name,
+            uri: t.uri,
+          }))
+      });
     },
   
   };
 
 
-  Spotify.getToken();
+  //Spotify.getToken();
 
 
   export { Spotify }
