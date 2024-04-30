@@ -4,7 +4,7 @@ import './App.css';
 import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
-//import { Spotify } from '../../utility/spotify';
+import { Spotify } from '../../utility/spotify';
 
 
 function App() {
@@ -80,10 +80,14 @@ function savePlaylist() {
   const trackURIs = playlistTracks.map((track) => track.uri)
 }
 
+function search(input){
+  console.log(input)
+}
+
   return (
     <div className="App">
        <h1 className="title">The Lounge</h1>
-       <SearchBar />
+       <SearchBar onSearch={search} />
        <div className="result-playlist">
         <SearchResults 
         title="Results" 
