@@ -7,7 +7,7 @@ import Track from '../Track/track';
 function Tracklist (props) {
       return (
         <div className="tracklistContainer">
-          {props.tracks?.map((track) => {
+          {props.tracks.map((track) => {
             return (
               <Track
                 key={track.id}

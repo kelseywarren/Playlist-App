@@ -10,16 +10,18 @@ function SearchBar(props) {
         setInput(e.target.value)
     }
 
-    const handleClick = () => { 
+    const handleClick = (e) => { 
+        e.preventDefault(); // prevent search results from flashing and going away
         props.onSearch(input)
     } 
 
     return (
-        <div>
-            <form className="search">
-            <input type="text" onChange={handleChange} placeholder="Search for songs"></input>
+        <div> 
+            <form onChange={handleChange}>{/* had to move onChange to form. previously was targeting input and wasn't working */}
+            <input className="search" type="text" placeholder="Search for songs"></input>
             <button className="searchButton" onClick={handleClick}>Search</button>
             </form>
+           
         </div>
     );
 };

@@ -81,10 +81,7 @@ function savePlaylist() {
 }
 
 function search(input){
-  Spotify.search(input)
-  .then((result) => {
-    return setSearchResults(result)
-  })
+  Spotify.search(input).then((data) => setSearchResults(data));
 }
 
   return (
