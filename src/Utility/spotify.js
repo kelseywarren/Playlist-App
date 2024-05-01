@@ -54,10 +54,39 @@ const redirectURI = "http://localhost:3000";
       });
     },
 
+    savePlaylist(name, trackUris) {
+      if (!name || !trackUris) return;
+      const accessToken = Spotify.getToken();
+      const header = { Authorization: `Bearer ${accessToken}` };
+      let userId;
+      return fetch(`https://api.spotify.com/v1/me`, { headers: header })
+        .then((response) => response.json())
+        .then((data) => {
+          userId = data.id;
+          let playlistId;
+          return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+            headers: header,
+            method: "post",
+            body: JSON.stringify({ name: name }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              playlistId = data.id;
+              return fetch(
+                `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
+                {
+                  headers: header,
+                  method: "post",
+                  body: JSON.stringify({ uris: trackUris }),
+                }
+              );
+            });
+        });
+    },
+  };
+   
 
-   };
-
-  Spotify.getToken();
+  //Spotify.getToken();
 
 
   export { Spotify };
