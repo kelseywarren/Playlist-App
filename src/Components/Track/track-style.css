@@ -1,13 +1,5 @@
-.trackContainer {
-width: auto;
-height: auto;
-text-align: left;
-border: 1px solid green;
-}
-
-.addButton {
+.button {
     position: relative;
-    left: 50%;
     bottom: 5px;
     border: none;
     cursor: pointer;

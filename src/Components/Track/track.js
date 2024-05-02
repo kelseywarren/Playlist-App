@@ -29,10 +29,11 @@ function Track(props) {
     }
 
     return (
-      <div>
-        <div className="song">{props.track.name}</div>
-        <span className="artistAlbum"> {props.track.artist} | {props.track.album}</span>
+      <div className="trackItem">
+        <div className="song">{props.track.name}</div><br></br>
+        <div className="artistAlbum"> {props.track.artist} | {props.track.album}
         {buttonAction()}
+        </div>
       </div>
     );
   }
