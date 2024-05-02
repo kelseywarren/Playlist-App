@@ -86,7 +86,7 @@ const redirectURI = "http://localhost:3000";
   };
    
 
-  //Spotify.getToken();
+  Spotify.getToken(); //first search works when getToken is called outside of Spotify
 
 
   export { Spotify };
