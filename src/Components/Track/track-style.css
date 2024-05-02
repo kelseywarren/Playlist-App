@@ -1,7 +1,36 @@
+.trackItem {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: solid 1px black;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+.song {
+    padding-bottom: 2px;
+}
+
+.artistAlbum {
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.trackImg {
+    width: 55px;
+    height: 55px;
+}
+
 .button {
     position: relative;
-    bottom: 5px;
+    bottom: 40px;
     border: none;
     cursor: pointer;
 }
-

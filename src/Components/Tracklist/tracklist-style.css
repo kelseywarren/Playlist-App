@@ -5,23 +5,5 @@
   padding-right: 17px;
 }
 
-.trackItem {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    border-bottom: solid 1px black;
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 15px;
-    text-align: left;
-  }
 
-  .artistAlbum {
-    font-size: 12px;
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-  
-  }
 

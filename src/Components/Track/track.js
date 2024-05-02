@@ -30,7 +30,8 @@ function Track(props) {
 
     return (
       <div className="trackItem">
-        <div className="song">{props.track.name}</div><br></br>
+        <div className="song">{props.track.name}</div>
+        <div><img className="trackImg" src={props.track.img}></img></div>
         <div className="artistAlbum"> {props.track.artist} | {props.track.album}
         {buttonAction()}
         </div>
