@@ -33,7 +33,7 @@ const redirectURI = "http://localhost:3000";
    
     search(input) {
       accessToken = Spotify.getToken();
-      return fetch(`https://api.spotify.com/v1/search?type=track&q=${input}`, {
+      return fetch(`https://api.spotify.com/v1/search?type=track&q=${input}&limit=50`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`
