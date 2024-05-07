@@ -1,3 +1,12 @@
-.search {
+.search, .searchButton {
     margin-bottom: 20px;
+    border: 1px solid rgb(176, 164, 176);
+    height: auto;
+    border-radius: 3px;
+    background: transparent;
+    color: black;
+}
+
+.search:focus {
+    outline: none;
 }
