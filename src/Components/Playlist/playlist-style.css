@@ -1,15 +1,15 @@
 .playlistContainer {
     padding-top: 20px;
+    border: 1px solid rgb(245, 245, 245);
     width: 300px;
     height: 700px;
-    border: 1px solid purple;
     overflow: scroll;
 }
 
 .playlistHeading {
     border: none;
     outline: none;
-    border-bottom: solid 1px purple;
+    border-bottom: solid 1px rgb(141, 102, 141);
     cursor: pointer;
     font-size: 22px;
 }
