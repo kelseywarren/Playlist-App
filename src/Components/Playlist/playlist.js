@@ -8,9 +8,20 @@ function Playlist(props) {
         props.onNameChange(e.target.value)
     }
     
+    function playlistPlaceholder() {
+        if(props.playlistTracks <= 0) {
+            return (
+            <div className="playlistPlaceholder">
+                <h2>Add songs to build playlist</h2>
+            </div>
+            )
+        }
+    }
+
     return (
         <div className="playlistContainer">
             <div className="playlist">
+                {playlistPlaceholder()}
                 <h2><input className="playlistHeading" defaultValue={props.playlistName} onChange={handleNameChange}></input></h2>
                 <Tracklist 
                 tracks={props.playlistTracks}
