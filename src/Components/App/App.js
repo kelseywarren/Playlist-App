@@ -55,7 +55,7 @@ const [playlistTracks, setPlaylistTracks] = useState([
 
   }
 ]);
-const [playlistName, setPlaylistName] = useState("Playlist 1")
+const [playlistName, setPlaylistName] = useState("Playlist Name")
 
 function addTrack(track) {
   const existingTrack = playlistTracks.find((t) => t.id === track.id);
@@ -94,7 +94,7 @@ function search(input){
        <SearchBar onSearch={search} />
        <div className="result-playlist">
         <SearchResults 
-        title="Results" 
+        title="Search" 
         searchResults={searchResults}
         onAdd={addTrack}
         />
