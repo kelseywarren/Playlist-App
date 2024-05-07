@@ -9,7 +9,7 @@ import { Spotify } from '../../utility/spotify';
 
 function App() {
 const [searchResults, setSearchResults] = useState([
-  {
+  /*{
     name: "track 1",
     artist: "artist 1",        //mock data
     album: "album 1", 
@@ -29,11 +29,11 @@ const [searchResults, setSearchResults] = useState([
     album: "album 3",
     id: 3,
 
-  }
+  }*/
 
 ]);
 const [playlistTracks, setPlaylistTracks] = useState([
-  {
+  /*{
     name: "track 11",
     artist: "artist 11",        //mock data
     album: "album 11", 
@@ -53,7 +53,7 @@ const [playlistTracks, setPlaylistTracks] = useState([
     album: "album 13",
     id: 13,
 
-  }
+  }*/
 ]);
 const [playlistName, setPlaylistName] = useState("Playlist Name")
 
