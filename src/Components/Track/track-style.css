@@ -35,3 +35,12 @@
     cursor: pointer;
     font-size: 18px;
 }
+
+
+
+.audioPlayer::-webkit-media-controls-panel {
+    width: 250px;
+    height: 60px;
+    background: white;
+}
+

@@ -50,7 +50,9 @@ const redirectURI = "http://localhost:3000";
             artist: t.artists[0].name,
             album: t.album.name,
             uri: t.uri,
-            img: t.album.images[0].url
+            img: t.album.images[0].url,
+            preview_url: t.preview_url
+            
           }));
       });
     },
