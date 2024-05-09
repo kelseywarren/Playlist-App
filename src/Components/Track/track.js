@@ -30,6 +30,7 @@ function Track(props) {
 
     return (
       <div className="trackItem">
+        <span className="trackPreview"><audio controls className="audioPlayer"src={props.track.preview_url}/></span>
         <div className="song">{props.track.name}</div>
         <div><img className="trackImg" src={props.track.img}></img></div>
         <div className="artistAlbum"> {props.track.artist} | {props.track.album}
