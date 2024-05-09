@@ -42,3 +42,7 @@
   justify-content: center;
   gap: 20px;
 }
+
+.title {
+  padding-top: 50px;
+}
