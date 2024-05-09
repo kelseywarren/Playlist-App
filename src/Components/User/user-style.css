@@ -1,0 +1,17 @@
+.userProfile {
+    width: 200px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.userName {
+    width: 150px;
+    height: 20px;
+    border: 1px solid green;
+}
+
+.userImg {
+    width: 100px;
+    height: 20px;
+    border: 1px solid blue;
+}
