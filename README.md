@@ -10,6 +10,7 @@ This project's intended purpose is to get experience and reinforce the skills re
 
 ## Features
 - Search for song, artists, album
+- Song preview 
 - Create playlist
 - Save playlist to spotify account
 
