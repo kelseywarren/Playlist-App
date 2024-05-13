@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
+import UserProfile from '../User/user';
 import { Spotify } from '../../utility/spotify';
 
 
@@ -55,7 +56,31 @@ const [playlistTracks, setPlaylistTracks] = useState([
 
   }*/
 ]);
-const [playlistName, setPlaylistName] = useState("Playlist Name")
+const [playlistName, setPlaylistName] = useState("Playlist Name");
+
+const [user, setUser] = useState([]);
+const [link, setLink] = useState([]);
+
+showUser();
+
+function showUser() {
+  Spotify.userProfile().then((data) => {
+    setUser(data.display_name);
+  });
+};
+
+showLink();
+
+function showLink() {
+  Spotify.userProfile().then((data) => {
+    setLink(data.external_urls.spotify);
+  });
+};
+
+
+function search(input) {
+  Spotify.search(input).then((data) => setSearchResults(data));
+}
 
 function addTrack(track) {
   const existingTrack = playlistTracks.find((t) => t.id === track.id);
@@ -82,15 +107,15 @@ function savePlaylist() {
     updatePlaylistName('New Playlist');
     setPlaylistTracks([]);
   });
-}
-
-function search(input){
-  Spotify.search(input).then((data) => setSearchResults(data));
-}
+};
 
   return (
     <div className="App">
        <h1 className="title">The Lounge</h1>
+       <UserProfile 
+       userName={user} 
+       userLink={link}
+       />
        <SearchBar onSearch={search} />
        <div className="result-playlist">
         <SearchResults 
@@ -108,6 +133,7 @@ function search(input){
        </div>
     </div>
   );
-}
+};
+
 
 export default App;
