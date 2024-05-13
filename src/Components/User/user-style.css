@@ -1,17 +1,18 @@
 .userProfile {
-    width: 200px;
-    height: 25px;
-    border: 1px solid black;
-}
-
-.userName {
-    width: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    width: 300px;
     height: 20px;
-    border: 1px solid green;
-}
-
-.userImg {
-    width: 100px;
-    height: 20px;
-    border: 1px solid blue;
-}
+  }
+  
+  .userName {
+    margin-bottom: 2px;
+  }
+  
+  .userLink {
+    color: blue;
+    text-decoration: none;
+  }
+  

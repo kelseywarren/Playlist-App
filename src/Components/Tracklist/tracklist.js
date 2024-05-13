@@ -18,6 +18,7 @@ function Tracklist (props) {
               />
             )
           })}
+          {/*track is value in () and could be named anything. Linked to prop values in track component as well  */}
         </div>
       );
 };

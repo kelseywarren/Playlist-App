@@ -31,8 +31,7 @@ const redirectURI = "http://localhost:3000";
       window.location = redirect;
       */
     },
-    
-    /*
+   /*
     search(input) {
       accessToken = Spotify.getToken();
       return fetch(`https://api.spotify.com/v1/search?type=track&q=${input}&limit=50`, {
@@ -46,8 +45,7 @@ const redirectURI = "http://localhost:3000";
           if (!data) {
             console.error("response error");
           } 
-
-          return data.tracks.items. map((t) => ({
+          return data.tracks.items.map((t) => ({
             id: t.id,
             name: t.name,
             artist: t.artists[0].name,
@@ -55,13 +53,11 @@ const redirectURI = "http://localhost:3000";
             uri: t.uri,
             img: t.album.images[0].url,
             preview_url: t.preview_url
-
-           /*tracks.items comes from api data in json --- name: artist: img: etc, come from props from the Track component*/
-            /*
+            
           }));
       });
     },
-    
+
     savePlaylist(name, trackUris) {
       if (!name || !trackUris) return;
       const accessToken = Spotify.getToken();
@@ -94,7 +90,7 @@ const redirectURI = "http://localhost:3000";
     */
     userProfile() {
       const accessToken = Spotify.getToken();
-      const header = { Authorization: `Bearer BQDOYsoav4RbTOi5Mgub7bx5S7Ll3XoDTaKovQFOeiy8e_kdADqpuOHq1orStfg2mNuZfoK3xkg7tNGKArKsS5hpP2hsoPogJAyyfPfXGq3uq4Tm2cZttNyD6dL6-3BeTbHzJLbnwUuEL2C4U6laISWMNvfeYIl1I9lXQZdo3RN0NxwelkZYAjhqLhbepKY2F0sE6qR5HEFzOsmZ38TsIaE_O9FqZi4` };
+      const header = { Authorization: `Bearer BQC8PRlhSN3NFuILDqMr5nmGW_rYuI7Xj-blp73ys4R0r15iE7-fEfe069RdvVGl_xo2Rdkcnpp2VOwgaAP8o4RY-Z4YBMTTjEKLYGN2N1S3EbQazfAVXD0lrIeU5cYfrF6RvE82mQw8Y4ai9xJ03yYAXMyjKPCfrz_CXjZTWWGf0CiD7D_oZXC0FQGRIF0L2HeBzHvA5bQfHjJZ3_LXlCWpbJhJ93k` };
       return fetch(
         "https://api.spotify.com/v1/me",  {
           headers: header,
@@ -106,21 +102,15 @@ const redirectURI = "http://localhost:3000";
           console.log(data.display_name)
           console.log(data.images)
           console.log(data.external_urls.spotify)
+          if (!data) {
+            console.log("error")
+          }
           /*
           return data.map((u) => ({
             userName: u.display_name,
             userImg: u.images[0].url
           }));
           */
-         let userDisplay = data.display_name;
-         let userPhoto = data.images;
-         let userLink = data.external_urls.spotify;
-
-         
-          console.log(userDisplay);
-          console.log(userPhoto);
-          console.log(userLink);
-  
         })
     }
 
@@ -137,4 +127,8 @@ const redirectURI = "http://localhost:3000";
 
 
 
+  http://localhost:3000/
 
+  http://localhost:3000/
+
+  calhost:3000/#access_token=BQBG6i2eGrOCA9K_7OMscdJRgiODqG7ddOEP-QR_Nmy73E04InUu93HXFGKrsx2taTsFKUgsKbzuHnhguxlaHka14MovfaEIiFS63hOHcclBHyu84o95IuM7tUwfuXCnRMCj-W864tuvYeXnpgsYRmpMJmX4bvC3cmALRnSWNb7pW43wWQtWlKV6dooas-CTRV-i1wLL-ef-oZg5s0yaHTfMLlIbj-I&token_type=Bearer&expires_in=3600
