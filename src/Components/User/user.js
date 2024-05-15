@@ -4,7 +4,7 @@ import "./user-style.css";
 function UserProfile(props) {
   return (
     <div className="userProfile">
-      <span className="userName">Logged in: {props.userName}</span>
+      <span className="userName">{props.userName}</span>
       <br></br>
       <span>
         <a className="userLink" href={props.userLink}>
