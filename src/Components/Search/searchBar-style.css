@@ -1,6 +1,6 @@
 .search, .searchButton {
     margin-bottom: 20px;
-    border: 1px solid rgb(176, 164, 176);
+    border: 1px solid rgb(244, 239, 244);
     height: auto;
     border-radius: 3px;
     background: transparent;
@@ -9,4 +9,8 @@
 
 .search:focus {
     outline: none;
+}
+
+.search {
+    width: 180px;
 }
