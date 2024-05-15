@@ -14,3 +14,7 @@
 .search {
     width: 180px;
 }
+
+.searchButton:active {
+    background-color: rgb(244, 239, 244);
+}
