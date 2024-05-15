@@ -15,6 +15,10 @@
     width: 180px;
 }
 
-.searchButton:active {
+.searchButton:hover {
     background-color: rgb(244, 239, 244);
+}
+
+.searchButton:active {
+    font-weight: bold;
 }
