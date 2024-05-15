@@ -8,7 +8,7 @@ function SearchResults(props) {
         if(props.searchResults <= 0){
             return (
                 <div className="searchPlaceholder">
-                <h2>Discover songs and create a playlist</h2>
+                <h2>Discover songs</h2>
                 </div>
             )
         }

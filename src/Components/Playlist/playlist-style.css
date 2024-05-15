@@ -13,3 +13,7 @@
     cursor: pointer;
     font-size: 22px;
 }
+
+.playlistPlaceholder {
+    font-size: 13px;
+}
