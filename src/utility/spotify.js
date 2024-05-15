@@ -112,6 +112,24 @@ const redirectURI = "http://localhost:3000";
         });
     },
 
+    userPlaylists() {
+      const accessToken = Spotify.getToken();
+      const header = { Authorization: `Bearer ${accessToken}` };
+      return fetch("https://api.spotify.com/v1/me/playlists?offset=0", {
+        headers: header,
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+  
+          return data.items.map((p) => ({
+            playlist_name: p.name,
+            track_count: p.tracks.total,
+            info: p.tracks.href,
+          }));
+        });
+    },
 
   };
 
