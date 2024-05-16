@@ -139,7 +139,7 @@ function savePlaylist() {
         onSave={savePlaylist}
         />
        </div>
-       <div className="plistContainer">
+       <div>
        <UserPlaylistContainer
        container={userPlaylist}
         />
