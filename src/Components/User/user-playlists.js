@@ -5,8 +5,8 @@ function UserPlaylists(props) {
   return (
   <div className="userPlaylists">
     <div>{props.plist.playlistName}</div>
-    <div>{props.plist.trackCount}</div>
-    <div>{props.plist.info}</div>
+    <div>{props.plist.trackCount} tracks</div>
+    <div>{props.plist.image}</div>
 </div>
   );
 };
