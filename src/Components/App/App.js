@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
 import UserProfile from '../User/user';
+import UserPlaylistContainer from '../User/user-playlist-container';
 import { Spotify } from '../../utility/spotify';
-
 
 function App() {
 const [searchResults, setSearchResults] = useState([
@@ -60,6 +60,14 @@ const [playlistName, setPlaylistName] = useState("Playlist Name");
 
 const [user, setUser] = useState([]);
 const [link, setLink] = useState([]);
+
+const [userPlaylist, setUserPlaylist] = useState([]);
+
+useEffect(() => {
+  Spotify.userPlaylists().then((data) => {
+    setUserPlaylist(data)
+  })
+}, [])
 
 showUser();
 
@@ -131,6 +139,11 @@ function savePlaylist() {
         onSave={savePlaylist}
         />
        </div>
+       <div className="plistContainer">
+       <UserPlaylistContainer
+       container={userPlaylist}
+        />
+      </div>
     </div>
   );
 };

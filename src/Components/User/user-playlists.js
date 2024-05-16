@@ -1,11 +1,12 @@
 import React from "react";
+import "./user-playlists-style.css";
 
 function UserPlaylists(props) {
   return (
   <div className="userPlaylists">
-    <div>{props.container.playlist_name}</div>
-    <div>{props.container.track_count}</div>
-    <div>{props.container.info}</div>
+    <div>{props.plist.playlistName}</div>
+    <div>{props.plist.trackCount}</div>
+    <div>{props.plist.info}</div>
 </div>
   );
 };

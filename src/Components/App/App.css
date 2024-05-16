@@ -46,3 +46,11 @@
 .title {
   padding-top: 50px;
 }
+
+.plistContainer {
+  width: 650px;
+  height: 100px;
+  border: 1px solid black;
+  margin-right: auto;
+  margin-left: auto;
+}

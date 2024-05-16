@@ -121,12 +121,12 @@ const redirectURI = "http://localhost:3000";
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
-  
+          //console.log(data);
           return data.items.map((p) => ({
-            playlist_name: p.name,
-            track_count: p.tracks.total,
+            playlistName: p.name,
+            trackCount: p.tracks.total,
             info: p.tracks.href,
+            id: p.id
           }));
         });
     },
@@ -135,7 +135,7 @@ const redirectURI = "http://localhost:3000";
 
    
   Spotify.getToken(); //first search works when getToken is called outside of Spotify
-  //Spotify.userProfile();
+  Spotify.userProfile();
 
 
   export { Spotify };
