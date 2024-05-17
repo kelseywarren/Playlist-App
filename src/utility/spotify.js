@@ -134,8 +134,8 @@ const redirectURI = "http://localhost:3000";
   };
 
    
-  Spotify.getToken(); //first search works when getToken is called outside of Spotify
-  Spotify.userProfile();
+  //Spotify.getToken(); //first search works when getToken is called outside of Spotify
+  //Spotify.userProfile();
 
 
   export { Spotify };

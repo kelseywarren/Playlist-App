@@ -69,21 +69,20 @@ useEffect(() => {
   })
 }, [])
 
-showUser();
 
-function showUser() {
+
+useEffect(() => {
   Spotify.userProfile().then((data) => {
     setUser(data.display_name);
   });
-};
+},[])
 
-showLink();
 
-function showLink() {
+useEffect(() => {
   Spotify.userProfile().then((data) => {
     setLink(data.external_urls.spotify);
   });
-};
+},[])
 
 
 function search(input) {
