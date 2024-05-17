@@ -14,6 +14,10 @@
     font-size: 22px;
 }
 
+.playlistHeading:hover {
+    background: rgb(245, 245, 245);
+}
+
 .playlistPlaceholder {
     font-size: 13px;
 }
