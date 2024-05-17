@@ -67,7 +67,7 @@ useEffect(() => {
   Spotify.userPlaylists().then((data) => {
     setUserPlaylist(data)
   })
-}, [])
+}, [savePlaylist]) // adds new playlist to user playlist container 
 
 
 
@@ -75,7 +75,7 @@ useEffect(() => {
   Spotify.userProfile().then((data) => {
     setUser(data.display_name);
   });
-},[])
+}, [])
 
 
 useEffect(() => {
@@ -113,6 +113,7 @@ function savePlaylist() {
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
     setPlaylistName('New Playlist');
     setPlaylistTracks([]);
+    setUserPlaylist(prev => [userPlaylist, ...prev])
   });
 };
 
