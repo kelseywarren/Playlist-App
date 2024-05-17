@@ -125,7 +125,7 @@ const redirectURI = "http://localhost:3000";
           return data.items.map((p) => ({
             playlistName: p.name,
             trackCount: p.tracks.total,
-            id: p.id
+            image: p.images[0].url,
           }));
         });
           
