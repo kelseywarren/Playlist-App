@@ -19,6 +19,14 @@ function Playlist(props) {
         }
     }
 
+    function playlistNameInput() {
+        if(props.playlistTracks.length > 0) {
+            return (
+                <h2><input className="playlistHeading" defaultValue={props.playlistName} onChange={handleNameChange}></input></h2>
+            )
+        }
+    }
+
     function showSaveButton() {
         if(props.playlistTracks.length > 0) {
             return (
@@ -31,7 +39,7 @@ function Playlist(props) {
         <div className="playlistContainer">
             <div className="playlist">
                 {playlistPlaceholder()}
-                <h2><input className="playlistHeading" defaultValue={props.playlistName} onChange={handleNameChange}></input></h2>
+                {playlistNameInput()}
                 <Tracklist 
                 tracks={props.playlistTracks}
                 isSelected={true}
