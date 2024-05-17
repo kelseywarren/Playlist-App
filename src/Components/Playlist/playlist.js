@@ -2,6 +2,7 @@ import React from 'react';
 import './playlist-style.css';
 import Tracklist from '../Tracklist/tracklist';
 
+
 function Playlist(props) {
 
     const handleNameChange = (e) => {
@@ -18,6 +19,14 @@ function Playlist(props) {
         }
     }
 
+    function showSaveButton() {
+        if(props.playlistTracks.length > 0) {
+            return (
+                <button className="saveButton" onClick={props.onSave}>Save to Spotify</button>
+            )
+        }
+    }
+
     return (
         <div className="playlistContainer">
             <div className="playlist">
@@ -28,7 +37,7 @@ function Playlist(props) {
                 isSelected={true}
                 onRemove={props.onRemove}/>
             </div>
-            <button className="saveButton" onClick={props.onSave}>Save to Spotify</button>
+            <div>{showSaveButton()}</div>
         </div>
     )
 };
