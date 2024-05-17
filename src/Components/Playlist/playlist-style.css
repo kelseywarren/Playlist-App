@@ -17,3 +17,19 @@
 .playlistPlaceholder {
     font-size: 13px;
 }
+
+.saveButton {
+    margin-top: 10px;
+    border: 1px solid rgb(244, 239, 244);
+    border-radius: 50px;
+    height: 40px;
+}
+
+.saveButton:hover {
+    background-color: rgb(244, 239, 244);
+}
+
+.saveButton:active {
+    font-weight: bold;
+    
+}
