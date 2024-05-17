@@ -13,7 +13,8 @@ This project's intended purpose is to get experience and reinforce the skills re
 - Song preview 
 - Create playlist
 - Save playlist to spotify account
-- View username and spotify profile
+- View current username and spotify profile
+- View current user's playlists
 
 ## Technologies
 - React
