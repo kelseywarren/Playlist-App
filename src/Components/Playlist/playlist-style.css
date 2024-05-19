@@ -24,13 +24,17 @@
 
 .saveButton {
     margin-top: 10px;
-    border: 1px solid rgb(244, 239, 244);
+    background: rgb(244, 239, 244);
+    border: 1px solid white;
+    width: 150px;
     border-radius: 50px;
-    height: 40px;
+    height: 45px;
 }
 
 .saveButton:hover {
-    background-color: rgb(244, 239, 244);
+    background-color: rgb(184, 151, 184);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(193,135,188,1) 65%, rgba(212,178,211,1) 79%, rgba(214,178,210,1) 79%, rgba(211,178,211,1) 100%, rgba(148,187,233,1) 100%);
+    color: white;
 }
 
 .saveButton:active {
