@@ -33,9 +33,12 @@
     bottom: 40px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 22px;
 }
 
+.button:hover {
+    color:rgb(174, 93, 174);
+}
 
 
 .audioPlayer::-webkit-media-controls-panel {
