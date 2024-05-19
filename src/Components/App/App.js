@@ -107,6 +107,7 @@ function savePlaylist() {
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
     setPlaylistName('New Playlist');
     setPlaylistTracks([]);
+    setSearchResults([]);
     //setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
   });
 };
