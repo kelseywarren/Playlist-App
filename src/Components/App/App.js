@@ -5,7 +5,7 @@ import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
 import UserProfile from '../User/user';
-import UserPlaylistContainer from '../User/user-playlist-container';
+//import UserPlaylistContainer from '../User/user-playlist-container';
 import { Spotify } from '../../utility/spotify';
 
 function App() {
@@ -61,14 +61,14 @@ const [playlistName, setPlaylistName] = useState("Playlist Name");
 const [user, setUser] = useState([]);
 const [link, setLink] = useState([]);
 
-const [userPlaylist, setUserPlaylist] = useState([]);
-
+//const [userPlaylist, setUserPlaylist] = useState([]);
+/*
 useEffect(() => {
   Spotify.userPlaylists().then((data) => {
     setUserPlaylist(data)
   })
 }, [savePlaylist]) // renders on update
-
+*/
 
 
 useEffect(() => {
@@ -107,7 +107,7 @@ function savePlaylist() {
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
     setPlaylistName('New Playlist');
     setPlaylistTracks([]);
-    setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
+    //setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
   });
 };
 
@@ -134,13 +134,11 @@ function savePlaylist() {
         />
        </div>
        <div>
-       <UserPlaylistContainer
-       container={userPlaylist}
-        />
       </div>
     </div>
   );
 };
 
+//       <UserPlaylistContainercontainer={userPlaylist}/>
 
 export default App;
