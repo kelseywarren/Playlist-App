@@ -7,7 +7,7 @@ function UserProfile(props) {
       <span className="userName">{props.userName}</span>
       <br></br>
       <span>
-        <a className="userLink" href={props.userLink}>
+        <a className="userLink" href={props.userLink} target="_blank">
           Spotify Profile
         </a>
       </span>

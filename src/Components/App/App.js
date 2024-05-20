@@ -5,7 +5,8 @@ import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
 import UserProfile from '../User/user';
-import UserPlaylistContainer from '../User/user-playlist-container';
+//import UserPlaylistContainer from '../User/user-playlist-container';
+import Success from '../Message/message';
 import { Spotify } from '../../utility/spotify';
 
 function App() {
@@ -61,28 +62,24 @@ const [playlistName, setPlaylistName] = useState("Playlist Name");
 const [user, setUser] = useState([]);
 const [link, setLink] = useState([]);
 
-const [userPlaylist, setUserPlaylist] = useState([]);
+const [success, setSuccess] = useState(false);
 
+//const [userPlaylist, setUserPlaylist] = useState([]);
+/*
 useEffect(() => {
   Spotify.userPlaylists().then((data) => {
     setUserPlaylist(data)
   })
 }, [savePlaylist]) // renders on update
-
+*/
 
 
 useEffect(() => {
   Spotify.userProfile().then((data) => {
     setUser(data.display_name);
+    setLink(data.external_urls.spotify)
   });
 }, [])
-
-
-useEffect(() => {
-  Spotify.userProfile().then((data) => {
-    setLink(data.external_urls.spotify);
-  });
-},[])
 
 
 function search(input) {
@@ -108,12 +105,19 @@ function updatePlaylistName(name) {
   setPlaylistName(name);
 }
 
+
 function savePlaylist() {
   const trackURIs = playlistTracks.map((t) => t.uri);
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
     setPlaylistName('New Playlist');
     setPlaylistTracks([]);
-    setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
+    setSearchResults([]);
+    setSuccess(true);
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000)
+    //setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
   });
 };
 
@@ -123,6 +127,9 @@ function savePlaylist() {
        <UserProfile 
        userName={user} 
        userLink={link}
+       />
+       <Success
+       success={success}
        />
        <SearchBar onSearch={search} />
        <div className="result-playlist">
@@ -140,13 +147,11 @@ function savePlaylist() {
         />
        </div>
        <div>
-       <UserPlaylistContainer
-       container={userPlaylist}
-        />
       </div>
     </div>
   );
 };
 
+//       <UserPlaylistContainercontainer={userPlaylist}/>
 
 export default App;
