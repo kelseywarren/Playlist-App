@@ -6,6 +6,7 @@ import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
 import UserProfile from '../User/user';
 //import UserPlaylistContainer from '../User/user-playlist-container';
+import Success from '../Message/message';
 import { Spotify } from '../../utility/spotify';
 
 function App() {
@@ -61,6 +62,8 @@ const [playlistName, setPlaylistName] = useState("Playlist Name");
 const [user, setUser] = useState([]);
 const [link, setLink] = useState([]);
 
+const [success, setSuccess] = useState(false);
+
 //const [userPlaylist, setUserPlaylist] = useState([]);
 /*
 useEffect(() => {
@@ -102,12 +105,18 @@ function updatePlaylistName(name) {
   setPlaylistName(name);
 }
 
+
 function savePlaylist() {
   const trackURIs = playlistTracks.map((t) => t.uri);
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
     setPlaylistName('New Playlist');
     setPlaylistTracks([]);
     setSearchResults([]);
+    setSuccess(true);
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000)
     //setUserPlaylist(prev => [userPlaylist, ...prev]) // add new playlist to user playlist container 
   });
 };
@@ -118,6 +127,9 @@ function savePlaylist() {
        <UserProfile 
        userName={user} 
        userLink={link}
+       />
+       <Success
+       success={success}
        />
        <SearchBar onSearch={search} />
        <div className="result-playlist">
