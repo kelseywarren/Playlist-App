@@ -1,6 +1,8 @@
+// import react, useState, useEffect 
+// import components 
+// import Spotify 
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
 import SearchBar from '../Search/searchBar';
 import SearchResults from '../SearchResults/searchResults';
 import Playlist from '../Playlist/playlist';
@@ -9,7 +11,9 @@ import UserProfile from '../User/user';
 import Success from '../Message/message';
 import { Spotify } from '../../utility/spotify';
 
+// Main App function
 function App() {
+// states
 const [searchResults, setSearchResults] = useState([
   /*{
     name: "track 1",
@@ -58,13 +62,11 @@ const [playlistTracks, setPlaylistTracks] = useState([
   }*/
 ]);
 const [playlistName, setPlaylistName] = useState("Playlist Name");
-
 const [user, setUser] = useState([]);
 const [link, setLink] = useState([]);
-
 const [success, setSuccess] = useState(false);
 
-//const [userPlaylist, setUserPlaylist] = useState([]);
+// const [userPlaylist, setUserPlaylist] = useState([]);
 /*
 useEffect(() => {
   Spotify.userPlaylists().then((data) => {
@@ -73,7 +75,7 @@ useEffect(() => {
 }, [savePlaylist]) // renders on update
 */
 
-
+// get user username and spotify profile link and render once
 useEffect(() => {
   Spotify.userProfile().then((data) => {
     setUser(data.display_name);
@@ -81,11 +83,12 @@ useEffect(() => {
   });
 }, [])
 
-
+// get search data and render data 
 function search(input) {
   Spotify.search(input).then((data) => setSearchResults(data));
 }
 
+// add new track function 
 function addTrack(track) {
   const existingTrack = playlistTracks.find((t) => t.id === track.id);
   const newTrack = playlistTracks.concat(track);
@@ -96,16 +99,18 @@ function addTrack(track) {
   }
 };
 
+// remove track function 
 function removeTrack(track) {
   const existingTrack = playlistTracks.filter((t) => t.id !== track.id);
   setPlaylistTracks(existingTrack);
 };
 
+// update playlist name 
 function updatePlaylistName(name) {
   setPlaylistName(name);
 }
 
-
+// save playlist function and reset states
 function savePlaylist() {
   const trackURIs = playlistTracks.map((t) => t.uri);
   Spotify.savePlaylist(playlistName, trackURIs).then(() => {
@@ -121,6 +126,7 @@ function savePlaylist() {
   });
 };
 
+// component renders 
   return (
     <div className="App">
        <h1 className="title">The Lounge</h1>
