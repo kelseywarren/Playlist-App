@@ -1,5 +1,4 @@
 .resultsContainer {
-    padding-top: 20px;
     border: 1px solid rgb(245, 245, 245);
     width: 500px;
     height: 700px;
@@ -7,7 +6,13 @@
   }
 
 
-  
+  .searchPlaceholder, .resultsContainer {
+    background-image: url('/images/smooth-empty-minimal-white-neumorphic-wallpaper-presentation_1017-44319.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
   
   
