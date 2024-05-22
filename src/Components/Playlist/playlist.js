@@ -13,7 +13,9 @@ function Playlist(props) {
         if(props.playlistTracks <= 0) {
             return (
             <div>
-                <h2 className="playlistPlaceholder">Add songs to start building playlist</h2>
+                <h2 className="playlistPlaceholder">Playlist</h2>
+                <p className="playlistPlaceholderSub"> add songs to build playlist
+                </p>
             </div>
             )
         }

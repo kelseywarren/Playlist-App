@@ -40,6 +40,10 @@
     color:rgb(174, 93, 174);
 }
 
+.button:active {
+    font-weight: bold;
+}
+
 
 .audioPlayer::-webkit-media-controls-panel {
     width: 250px;

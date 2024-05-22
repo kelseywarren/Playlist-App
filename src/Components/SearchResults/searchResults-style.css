@@ -6,7 +6,7 @@
   }
 
 
-  .searchPlaceholder, .resultsContainer {
+  .searchPlaceholder, .searchPlaceholderSub, .resultsContainer {
     background-image: url('/images/smooth-empty-minimal-white-neumorphic-wallpaper-presentation_1017-44319.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -14,6 +14,15 @@
     background-size: cover;
   }
 
+  .searchPlaceholder {
+    margin: 0px;
+  }
+
+  .searchPlaceholderSub {
+    margin: 0px;
+    padding-top: 10px;
+    font-style: italic;
+  }
   
   
 

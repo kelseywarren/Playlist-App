@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-.playlistPlaceholder, .playlistContainer {
+.playlistPlaceholder, .playlistPlaceholderSub, .playlistContainer {
     background-image: url('/images/smooth-empty-minimal-white-neumorphic-wallpaper-presentation_1017-44319.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -26,8 +26,20 @@
     background-size: cover;
 }
 
+.playlistPlaceholder {
+    margin: 0px;
+}
+
+.playlistPlaceholderSub {
+    margin: 0px;
+    padding-top: 10px;
+    font-style: italic;
+}
+
 h2 {
     margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
 .saveButton {
@@ -50,7 +62,8 @@ h2 {
 
 .saveButton:active {
     font-weight: bold;
-    color: black;
     cursor: pointer;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(230,203,230,1) 0%, rgba(255,234,252,1) 0%, rgba(255,255,255,1) 0%, rgba(245,213,241,1) 67%, rgba(241,236,241,1) 99%, rgba(245,217,242,1) 99%, rgba(170,130,169,1) 99%);
     
 }

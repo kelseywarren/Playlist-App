@@ -9,6 +9,7 @@ function SearchResults(props) {
             return (
                 <div>
                 <h2 className="searchPlaceholder">Discover songs</h2>
+                <p className="searchPlaceholderSub">searched songs will be listed here</p>
                 </div>
             )
         }
