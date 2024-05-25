@@ -22,3 +22,11 @@ This project's intended purpose is to get experience and reinforce the skills re
 - CSS
 - Spotify Web API
 
+## Note
+Styling was a secondary focal point, so only simple (minimimalistic) style applied. Main focal point of project was working with react, spotify api, and getting everything to work for the purpose of furthering skills and learning. 
+
+## Preview
+<img width="500" alt="Screenshot 2024-05-24 at 9 45 12 PM" src="https://github.com/kelseywarren/Playlist-App/assets/157708983/bcf136b4-5145-4632-a0c4-eabe0537fedd">
+<img width="500" alt="Screenshot 2024-05-24 at 9 43 21 PM" src="https://github.com/kelseywarren/Playlist-App/assets/157708983/e3e6cc04-e5d5-4efe-b507-0dbc381623ae">
+<img width="500" alt="Screenshot 2024-05-24 at 9 49 27 PM" src="https://github.com/kelseywarren/Playlist-App/assets/157708983/dad022eb-4fe1-4926-9143-fe68013564fc">
+<img width="500" alt="Screenshot 2024-05-24 at 9 50 56 PM" src="https://github.com/kelseywarren/Playlist-App/assets/157708983/709b58d7-4035-4a53-ad78-2c2d70ed7b0a">
