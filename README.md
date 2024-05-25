@@ -23,7 +23,7 @@ This project's intended purpose is to get experience and reinforce the skills re
 - Spotify Web API
 
 ## Note
-Styling is a secondary focal point, so only simple (minimimalistic) style applied. Main focal point of project is working with react, spotify api, and getting everything to work for the purpose of furthering skills and learning. 
+Main focal point of project is learning react, working with an api, and getting everything to function for the purpose of furthering skills and learning. Simple (minimalistic) styling applied as a secondary focal point. 
 
 ## Preview
 <img width="500" alt="Screenshot 2024-05-24 at 9 45 12 PM" src="https://github.com/kelseywarren/Playlist-App/assets/157708983/bcf136b4-5145-4632-a0c4-eabe0537fedd">
