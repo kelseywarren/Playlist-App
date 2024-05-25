@@ -1,7 +1,7 @@
 .search, .searchButton {
     margin-bottom: 20px;
     border: 1px solid rgb(244, 239, 244);
-    height: auto;
+    height: 20px;
     border-radius: 3px;
     background: transparent;
     color: black;
@@ -12,7 +12,11 @@
 }
 
 .search {
-    width: 180px;
+    width: 200px;
+}
+
+.searchButton {
+    height: 24px;
 }
 
 .searchButton:hover {

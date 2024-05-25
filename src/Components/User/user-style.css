@@ -10,15 +10,17 @@
   
   .userName {
     margin-bottom: 2px;
+    font-size: 14px;
   }
   
   .userLink {
     color: rgb(141, 102, 141);
     text-decoration: none;
+    font-size: 15px;
   }
 
   .userLink:hover {
-    font-weight: bold;
+    font-style: italic;
     color:rgb(174, 93, 174);
   }
   

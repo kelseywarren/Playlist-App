@@ -1,5 +1,4 @@
 .playlistContainer {
-    padding-top: 20px;
     border: 1px solid rgb(245, 245, 245);
     width: 500px;
     height: 700px;
@@ -16,14 +15,36 @@
 
 .playlistHeading:hover {
     background: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+.playlistPlaceholder, .playlistPlaceholderSub, .playlistContainer {
+    background-image: url('/images/smooth-empty-minimal-white-neumorphic-wallpaper-presentation_1017-44319.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .playlistPlaceholder {
-    font-size: 13px;
+    margin: 0px;
+}
+
+.playlistPlaceholderSub {
+    margin: 0px;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
 .saveButton {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background: rgb(244, 239, 244);
     border: 1px solid white;
     width: 150px;
@@ -35,9 +56,14 @@
     background-color: rgb(184, 151, 184);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(193,135,188,1) 65%, rgba(212,178,211,1) 79%, rgba(214,178,210,1) 79%, rgba(211,178,211,1) 100%, rgba(148,187,233,1) 100%);
     color: white;
+    font-weight:bold;
+    cursor: pointer;
 }
 
 .saveButton:active {
     font-weight: bold;
+    cursor: pointer;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(230,203,230,1) 0%, rgba(255,234,252,1) 0%, rgba(255,255,255,1) 0%, rgba(245,213,241,1) 67%, rgba(241,236,241,1) 99%, rgba(245,217,242,1) 99%, rgba(170,130,169,1) 99%);
     
 }
